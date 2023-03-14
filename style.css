@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 
+    2. Remove default margin
+   */
+* {
+    margin: 0;
+}
+
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Chivo', sans-serif;
+}
+
+/*
+    6. Improve media defaults
+ */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    font-family: 'Chivo', sans-serif;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-image: url('./assets/mobile/image-host.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.background {
+    background-color: rgba(18, 23, 37, 0.9);
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 327px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.pod_icon {
+    margin-bottom: 57px;
+}
+
+.title span {
+    color: #54E6AF;
+    font-size: 26px;
+}
+
+.title p {
+    font-size: 27px;
+    line-height: 38px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.title {
+    margin-bottom: 16px;
+}
+
+.paragraph {
+    margin-bottom: 35px;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #C2CBE5;
+}
+
+.icons_buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.input {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.input span {
+    padding-left: 30px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#output_span {
+    display: none;
+}
+
+.output_incorect {
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+
+.output_corect {
+    color: green;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.desktop {
+    display: none;
+}
+
+input {
+    padding-left: 31px;
+    background-color: #2C344B;
+    border-radius: 27px;
+    width: 327px;
+    height: 46px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+button {
+    width: 327px;
+    height: 46px;
+    border: none;
+    border-radius: 28px;
+    box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.497913);
+    background-color: #54E6AF;
+    font-size: 14px;
+    font-weight: 700;
+    color: #121725;
+}
+
+.input_buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image {
+    display: none;
+}
+
+.desktop_icons {
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #B3FFE2;
+    box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.2);
+    transition: all;
+}
+
+.image_desktop {
+    display: none;
+}
+
+@media (min-width:768px) {
+    body {
+        background-image: none;
+        background-color: #121725;
+    }
+
+    .background {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .image {
+        display: block;
+    }
+
+    .main {
+        width: 730px;
+        /* height: 670px; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-direction: column;
+        background-image: url('./assets/tablet/image-host.jpg');
+        background-repeat: no-repeat;
+        background-size: 491px 767px;
+        background-position: top 0 right -20px;
+        margin-bottom: 150px;
+    }
+
+    .container {
+        width: 635px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        background-color: #121725;
+        margin-top: 80px;
+    }
+
+    .image {
+        width: 730px;
+    }
+
+    .title {
+        margin-top: 80px;
+        margin-bottom: 31px;
+    }
+
+    .title p {
+        text-align: left;
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .title span {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .paragraph {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left;
+        width: 445px;
+        margin-bottom: 40px;
+    }
+
+    .icons_buttons {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .icons {
+        margin-bottom: 0;
+    }
+
+    .input_buttons {
+        width: 427px;
+        height: 56px;
+        background-color: #2C344B;
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .input {
+        margin-bottom: 0;
+    }
+
+    input {
+        width: 250px;
+
+    }
+
+    button {
+        width: 160px;
+    }
+
+    .icons {
+        display: none;
+
+    }
+
+    .desktop_icons {
+        display: block;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 550px;
+        margin-top: 60px;
+    }
+
+    .pod_icon {
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+
+
+
+
+    .mobile {
+        display: none;
+    }
+
+    .output_incorect {
+        color: red;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .output_corect {
+        color: green;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .desktop {
+        display: block;
+        margin-left: 30px;
+    }
+
+
+}
+
+@media (min-width:1440px) {
+    .background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .image{
+        display: none;
+    }
+    .image_desktop{
+        display: block;
+        margin-bottom: -50px;
+    }
+    .main {
+        width: 1275px;
+        background-image: url('./assets/desktop/image-host.jpg');
+        background-repeat: no-repeat;
+        background-size: 900px 640px;
+        background-position: bottom 0 right 0;
+        margin-bottom: 0;
+
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .container {
+        width: 723px;
+        margin-top: 102px;
+    }
+
+}
