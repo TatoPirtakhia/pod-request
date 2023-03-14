@@ -80,7 +80,11 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
+.desktop_container_bgimage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .background {
     background-color: rgba(18, 23, 37, 0.9);
     min-width: 100vw;
@@ -232,7 +236,11 @@ button:hover {
         background-image: none;
         background-color: #121725;
     }
-
+    .desktop_container_bgimage{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
     .background {
         display: flex;
         align-items: flex-end;
@@ -381,6 +389,7 @@ button:hover {
         justify-content: center;
 
     }
+  
     .image{
         display: none;
     }
